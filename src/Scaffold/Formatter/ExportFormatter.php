@@ -10,7 +10,7 @@ class ExportFormatter extends FormatterAbstract
 
         fputcsv($outstream, array_keys($this->elements));
         
-        foreach ($this->data as $row) 
+        foreach ($this->data->get() as $row) 
         {
             fputcsv($outstream, $row);
         }
