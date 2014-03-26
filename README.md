@@ -5,7 +5,7 @@ A PHP library for building flexible CRUD table maintenance with multiple primary
 
  > Built using the laravel 4.X `illumnate/database` package
  
- ###Installation
+###Installation
  
      # add the following to your composer.json
      "require" : {
