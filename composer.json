@@ -7,21 +7,9 @@
             "Scaffold": "src"
          }
     },
-    "repositories" : [
-		{
-			"url": "https://github.com/joegreen0991/fieldset.git",
-			"type": "git"
-		},
-		{
-			"url": "https://github.com/joegreen0991/validation.git",
-			"type": "git"
-		}
-	],
     "minimum-stability": "dev",
     "require" : {
-       "joegreen0991/validation": "dev-master",
-       "illuminate/database" : "*",
-       "joegreen0991/dbal" : "dev-master"
+       "illuminate/database" : "*"
     },
     "require-dev" : {
        "mockery/mockery": "dev-master"
