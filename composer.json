@@ -1,5 +1,5 @@
 {
-    "name": "joegreen0991/cms",
+    "name": "joegreen0991/scaffold",
     "type": "library",
     "description": "A Scaffold System",
     "autoload": {
@@ -7,6 +7,12 @@
             "Scaffold": "src"
          }
     },
+    "repositories" : [
+		{
+			"url": "https://github.com/joegreen0991/fieldset.git",
+			"type": "git"
+		}
+	],
     "minimum-stability": "dev",
     "require" : {
        "joegreen0991/validation": "dev-master",
