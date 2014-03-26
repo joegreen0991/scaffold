@@ -30,7 +30,7 @@ class SearchFormatter extends FormatterAbstract
             $searchString .= '<option value="'.$value.'">'.$label.'</option>';
         }
         
-        $string = '<form action="/" method="get">';
+        $string = '<form action="index" method="get">';
         
         foreach($this->elements as $name => $element)
         {
