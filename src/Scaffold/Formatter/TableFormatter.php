@@ -6,13 +6,13 @@ class TableFormatter extends FormatterAbstract
     {
         $string = '<table>';
         
-        foreach($this->data as $row)
+        foreach($this->data->get() as $row)
         {
             $string .= '<tr>';
             
             foreach($this->elements as $name => $element)
             {
-                $string .= '<td>'.$row[$name].'</td>';
+                $string .= '<td>' . $row[$name] . '</td>';
             }
         
             $string .= '</tr>';
