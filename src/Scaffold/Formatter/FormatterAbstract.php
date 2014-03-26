@@ -7,9 +7,10 @@ abstract class FormatterAbstract implements FormatterInterface
     protected $data;
     protected $elements;
     
-    public function __construct(array $elements, Builder $data)
+    public function __construct(array $elements, Builder $data = null)
     {
         $this->data = $data;
+        
         $this->elements = $elements;
     }
     

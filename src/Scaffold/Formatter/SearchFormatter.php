@@ -34,7 +34,9 @@ class SearchFormatter extends FormatterAbstract
         
         foreach($this->elements as $name => $element)
         {
-            $string .= '<div><label>'.$element['label'].'</label><input type="hidden" name="'.$name.'[]" value="'.$name.'"/><select name="'.$name.'[]">'.$searchString.'</select><input name="'.$name.'[]"/></div>';
+            $key = 'search['.$name.'][]';
+            
+            $string .= '<div><label>'.$element['label'].'</label><input type="hidden" name="'.$key.'" value="'.$name.'"/><select name="'.$key.'">'.$searchString.'</select><input name="'.$key.'"/></div>';
         }
         
         $string .= '<input type="submit"/></form>';
