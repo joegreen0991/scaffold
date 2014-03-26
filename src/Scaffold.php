@@ -31,7 +31,7 @@ class Scaffold {
     
     /**
      * 
-     * @param \Illuminate\Database\Query\Builder $db
+     * @param \Illuminate\Database\Connection $db
      */
     public function __construct(Db $db, $table)
     {
