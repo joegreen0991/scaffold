@@ -131,7 +131,7 @@ class Scaffold {
              ->delete();
     }
     
-    private function getPrimaryKey()
+    public function getPrimaryKey()
     {        
         return $this->getTableColumns(function($column){
             return $column['Key'] === 'PRI';
