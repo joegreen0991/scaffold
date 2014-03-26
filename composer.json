@@ -1,0 +1,19 @@
+{
+    "name": "joegreen0991/cms",
+    "type": "library",
+    "description": "A Scaffold System",
+    "autoload": {
+        "psr-0": { 
+            "Scaffold": "src"
+         }
+    },
+    "minimum-stability": "dev",
+    "require" : {
+       "joegreen0991/validation": "dev-master",
+       "illuminate/database" : "*",
+       "joegreen0991/dbal" : "dev-master"
+    },
+    "require-dev" : {
+       "mockery/mockery": "dev-master"
+    }
+}
