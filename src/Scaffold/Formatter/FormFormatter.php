@@ -17,7 +17,7 @@ class FormFormatter extends FormatterAbstract
             $fieldset->addTag($field);
         }
         
-        $fieldset->populate($this->data->first());
+        $this->data and $fieldset->populate($this->data->first());
         
         $fieldset->addTag(new \Fieldset\InputElement('submit'));
         
