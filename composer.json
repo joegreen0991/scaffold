@@ -11,6 +11,10 @@
 		{
 			"url": "https://github.com/joegreen0991/fieldset.git",
 			"type": "git"
+		},
+		{
+			"url": "https://github.com/joegreen0991/validation.git",
+			"type": "git"
 		}
 	],
     "minimum-stability": "dev",
