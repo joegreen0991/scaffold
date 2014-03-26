@@ -2,6 +2,9 @@
 
 use Illuminate\Database\Connection as Db;
 
+use Scaffold\ScaffoldDataRow;
+use Scaffold\ScaffoldDataSet;
+
 class Scaffold {
 
     /**
@@ -96,7 +99,7 @@ class Scaffold {
             $select->where($search[0], $search[1], $search[2]);
         }
         
-        return $select;
+        return new ScaffoldDataSet($select, $this->table, $this->getPrimaryKey());
     }
     
     public function insert(array $data)
@@ -131,7 +134,7 @@ class Scaffold {
              ->delete();
     }
     
-    public function getPrimaryKey()
+    private function getPrimaryKey()
     {        
         return $this->getTableColumns(function($column){
             return $column['Key'] === 'PRI';

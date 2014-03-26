@@ -1,6 +1,6 @@
 <?php namespace Scaffold\Formatter;
 
-use Illuminate\Database\Query\Builder as Builder;
+use Scaffold\ScaffoldDataSet;
 
 abstract class FormatterAbstract implements FormatterInterface
 {
@@ -8,15 +8,11 @@ abstract class FormatterAbstract implements FormatterInterface
     
     protected $elements;
     
-    protected $primaryKey;
-    
-    public function __construct(array $elements, Builder $data = null, $primaryKey = null)
+    public function __construct(array $elements, ScaffoldDataSet $data = null)
     {
-        $this->data = $data;
-
-        $this->primaryKey = $primaryKey;
-        
         $this->elements = $elements;
+        
+        $this->data = $data;
     }
     
     public function __toString()
