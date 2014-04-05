@@ -9,6 +9,7 @@
     },
     "minimum-stability": "dev",
     "require" : {
+       "joegreen0991/fieldset" : "*",
        "illuminate/database" : "*"
     },
     "require-dev" : {
