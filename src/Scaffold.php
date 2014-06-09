@@ -124,6 +124,8 @@ class Scaffold {
         
         $this->find($primaryFields)
              ->update(array_except($data, $primary));
+             
+        return $primaryFields;
     }
     
     public function delete(array $data)
