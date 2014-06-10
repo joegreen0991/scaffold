@@ -104,7 +104,7 @@ class Scaffold {
     
     public function insert(array $data)
     {
-        $insertId = $this->db->table($this->table)->insertGetId($data);
+        $insertId = $this->db->table($this->table)->insertGetId(array_only($data, $this->getTableColumns()));
         
         $keys = array_only($data, $this->getPrimaryKey());
         
@@ -123,8 +123,8 @@ class Scaffold {
         $primaryFields = array_only($data, $primary);
         
         $this->find($primaryFields)
-             ->update(array_except($data, $primary));
-             
+             ->update(array_except(array_only($data, $this->getTableColumns()), $primary));
+
         return $primaryFields;
     }
     
