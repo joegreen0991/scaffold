@@ -77,6 +77,8 @@ class Scaffold {
     {
         $keys = $this->getPrimaryKey();
 
+        $values = array_only($values, $keys); 
+
         $this->validatePrimaryKey($keys, $values);
                 
         foreach(array_values($values) as $i => $value)
