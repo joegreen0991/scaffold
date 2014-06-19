@@ -137,6 +137,38 @@ class Scaffold {
         $this->find($primaryFields)
              ->delete();
     }
+
+    public function getNext(array $data)
+    {
+        return $this->getNextPreviousInternal($data);
+    }
+
+    public function getPrevious(array $data)
+    {
+        return $this->getNextPreviousInternal($data, true);
+    }
+
+    private function getNextPreviousInternal(array $data, $prev = false)
+    {
+        $primary = $this->getPrimaryKey();
+
+        $primaryFields = array_only($data, $primary);
+
+        $select = $this->db->table($this->table)
+            ->select(array_keys($primaryFields))
+            ->limit(1);
+
+        $op = $prev ? '<' : '>';
+
+        foreach($primaryFields as $col => $value)
+        {
+            $select->where($col, $op, $value);
+
+            $select->orderBy($col);
+        }
+
+        return $select;
+    }
     
     private function getPrimaryKey()
     {        
