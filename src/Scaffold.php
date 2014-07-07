@@ -164,7 +164,7 @@ class Scaffold {
         {
             $select->where($col, $op, $value);
 
-            $select->orderBy($col);
+            $select->orderBy($col, $prev ?: 'asc');
         }
 
         return $select;
